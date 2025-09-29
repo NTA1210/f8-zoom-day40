@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redux</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Counter</h1>
+      <div class="counter"></div>
+      <div class="actions">
+        <button class="btn" id="inc">Increase</button>
+        <button class="btn" id="desc">Decrease</button>
+        <button class="btn" id="reset">Reset</button>
+        <button class="btn" id="delListener">Delete Listener</button>
+      </div>
+    </div>
+    <script src="/redux.js"></script>
+
+    <script>
+      console.log("Window Redux:", window.Redux);
+
+      const counter = document.querySelector(".counter");
+      const inc = document.querySelector("#inc");
+      const desc = document.querySelector("#desc");
+      const reset = document.querySelector("#reset");
+      const delListener = document.querySelector("#delListener");
+      const initialState = 0;
+
+      const counterReducer = (state = initialState, action) => {
+        switch (action.type) {
+          case "INCREMENT":
+            return state + 1;
+          case "DECREMENT":
+            return state - 1;
+          case "RESET":
+            return 0;
+          default:
+            return state;
+        }
+      };
+
+      const store = Redux.createStore(counterReducer);
+
+      const render = () => {
+        counter.textContent = store.getState();
+      };
+
+      const unsubscribe = store.subscribe(render);
+      render();
+
+      inc.addEventListener("click", () => {
+        store.dispatch({ type: "INCREMENT" });
+        console.log("State:", store.getState());
+      });
+      desc.addEventListener("click", () => {
+        store.dispatch({ type: "DECREMENT" });
+        console.log("State:", store.getState());
+      });
+      reset.addEventListener("click", () => {
+        store.dispatch({ type: "RESET" });
+        console.log("State:", store.getState());
+      });
+
+      delListener.addEventListener("click", () => {
+        unsubscribe();
+        console.log("Listener removed!");
+      });
+    </script>
+  </body>
+</html>
