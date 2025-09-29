@@ -1,11 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import {
+  BrowserRouter as Router,
+  HashRouter,
+  Routes,
+  Route,
+} from "react-router";
 
 // Comp
 import { TaskList, NewTask, EditTask } from "@/pages";
 
 function AppRoutes() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/">
           <Route index element={<TaskList />} />
@@ -15,7 +20,7 @@ function AppRoutes() {
 
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
