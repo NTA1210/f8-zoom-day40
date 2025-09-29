@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "title": "avs",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Practice Redux"
+    },
+    {
+      "id": "3",
+      "title": "Setup JSON Server"
+    },
+    {
+      "id": "4",
+      "title": "Setup React Router"
+    }
+  ]
+}

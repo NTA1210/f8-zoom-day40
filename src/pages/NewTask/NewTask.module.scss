@@ -1,0 +1,74 @@
+.container {
+  height: 100vh;
+}
+
+.new-task {
+  width: 400px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px solid #21b247;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 0.2) 0%,
+    rgba(87, 199, 133, 0.4) 50%,
+    rgba(237, 221, 83, 0.6) 100%
+  );
+}
+
+.input {
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.input.error {
+  border: 1px solid red;
+  color: inherit;
+  font-size: inherit;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.add {
+  background-color: #21b247;
+  color: white;
+}
+
+.cancel {
+  background-color: #ff0000;
+  color: white;
+}
+
+.add:hover {
+  background-color: #1a8d35;
+}
+.cancel:hover {
+  background-color: #cc0000;
+}

@@ -1,0 +1,44 @@
+body {
+  background-color: #f3f4f4;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.counter {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.btn {
+  border: 1px solid;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #ccc;
+}

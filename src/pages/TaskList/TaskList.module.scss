@@ -1,0 +1,45 @@
+.container {
+  height: 100vh;
+}
+
+.task-list {
+  position: relative;
+  min-width: 300px;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px solid #21b247;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 0.2) 0%,
+    rgba(87, 199, 133, 0.4) 50%,
+    rgba(237, 221, 83, 0.6) 100%
+  );
+}
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+.new {
+  background-color: #21b247;
+  color: white;
+}
+.new:hover {
+  background-color: #1a8f36;
+}
